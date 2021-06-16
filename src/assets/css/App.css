@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.active{
+  border-bottom: 1px solid white;
+}
+
+.main-content{
+  text-align: center;
+}
+nav > ul > li{
+display: inline-block;
+padding: 10px;
+}
+nav > ul > li > a{
+  text-decoration: none;
+  color: white;
+  }
+  nav{
+    background-color: darkturquoise;
+  }
