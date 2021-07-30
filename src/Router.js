@@ -4,6 +4,9 @@ import Projects from './components/Projects';
 import Error from './components/Error';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
+import FieldsOfStudy from './components/FieldsOfStudy';
+import Home from './components/Home';
+import Map from './components/Map';
 
 
 class Router extends React.Component {
@@ -14,10 +17,14 @@ class Router extends React.Component {
             <BrowserRouter>
             <Header/>
                 <Switch>
-                    <Route exact path="/" component={Projects} />
-                    <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/" component={Map} />
+                    {/* <Route exact path="/projects" component={Projects} />
 
                     <Route exact path="/formulario" component={Formulario} />
+
+                    <Route exact path="/fields-of-study" component={FieldsOfStudy} />
+
+                    <Route exact path="/map" component={Map} />
 
                     <Route exact path="/pagina-1" render={() => (
                         <h1>Pagina-1</h1>
@@ -33,7 +40,7 @@ class Router extends React.Component {
                                 <h4>El codigo es: {cod}</h4>
                             </React.Fragment>
                         );
-                    }} />
+                    }} /> */}
 
                     <Route component={Error} />
                 </Switch>

@@ -43,7 +43,9 @@
 
 .main-content{
   text-align: center;
+  margin-bottom: 100px;
 }
+
 nav > ul > li{
 display: inline-block;
 padding: 10px;
@@ -55,3 +57,16 @@ nav > ul > li > a{
   nav{
     background-color: darkturquoise;
   }
+
+#p-description{
+  white-space: pre-line;
+}
+
+#map{
+  height: 600px;
+}
+
+.image-project img{
+  width: 800px;
+  height: 300px;
+}

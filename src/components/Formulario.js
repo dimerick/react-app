@@ -15,19 +15,37 @@ class Formulario extends React.Component {
         e.preventDefault();
 
         const user = {
-            nombre: this.nombreRef.current.value, 
-            apellido: this.apellidoRef.current.value, 
+            nombre: this.nombreRef.current.value,
+            apellido: this.apellidoRef.current.value,
             description: this.descriptionRef.current.value
         }
 
-        console.log(this.nombreRef.current.value);
-        console.log(this.apellidoRef.current.value);
-        console.log(this.descriptionRef.current.value);
-        
+        console.log(user);
+        this.setState(
+            {
+                user: user
+            }
+        );
+
     }
     render() {
         return (
-            <form onSubmit={this.recibirFormulario}>
+            <form onSubmit={this.recibirFormulario} onChange={this.recibirFormulario}>
+                {
+                    this.state.user.nombre && 
+                    <div>
+                        <h4>Nombre: {this.state.user.nombre}</h4>
+                        <h4>Apellido: {this.state.user.apellido}</h4>
+                        
+                        <p id="p-description">Descripción: {this.state.user.description}</p>
+                        
+                        
+                    </div>
+                }
+
+              
+
+                
                 <div><input type="text" name="nombre" placeholder="Ingrese su nombre" ref={this.nombreRef} /></div>
                 <div><input type="text" name="apellido" placeholder="Ingrese su apellido" ref={this.apellidoRef} /></div>
                 <div>
